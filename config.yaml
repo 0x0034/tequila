@@ -16,12 +16,12 @@ system:
   #  路由全局前缀
   router-prefix: ""
 
+use-redis: false
+
 kubernetes:
   kubeconfig: /root/.kube/config # kubeconfig 文件路径
-  in-cluster: false  # 是否在集群内运行 gin-vue-admin，如果为 true 则 kubeconfig 无效
+  in-cluster: false  # 是否在集群内运行，如果为 true 则 kubeconfig 无效
 
-# mysql connect configuration
-# 未初始化之前请勿手动修改数据库信息！！！如果一定要手动初始化请看（https://gin-vue-admin.com/docs/first_master）
 mysql:
   path: ""
   port: ""

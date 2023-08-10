@@ -18,7 +18,7 @@ func main() {
 	zap.ReplaceGlobals(global.GlobalLog)
 	global.GlobalDB = initialize.GormMysql() // gorm连接数据库
 	// initialize.Timer()
-
+	
 	if global.GlobalDB != nil {
 		// 程序结束前关闭数据库链接
 		db, _ := global.GlobalDB.DB()

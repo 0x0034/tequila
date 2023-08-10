@@ -14,7 +14,10 @@ type server interface {
 }
 
 func RunWindowsServer() {
-
+	if global.GlobalConfig.System.UseRedis {
+		// 初始化redis服务
+		initialize.Redis()
+	}
 	Router := initialize.Routers()
 
 	address := fmt.Sprintf(":%d", global.GlobalConfig.System.Addr)
